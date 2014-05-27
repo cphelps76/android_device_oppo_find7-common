@@ -26,6 +26,10 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.qcom.usb.rc
 
+# Logo
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/logo.bin:system/logo.bin
+
 # Audio
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_platform_info.xml:system/etc/audio_platform_info.xml \
