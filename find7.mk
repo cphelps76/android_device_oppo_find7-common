@@ -28,7 +28,8 @@ PRODUCT_PACKAGES += \
 
 # Logo
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/logo.bin:system/logo.bin
+    $(LOCAL_PATH)/logo.bin:system/logo.bin \
+    $(LOCAL_PATH)/7slogo.bin:system/7slogo.bin
 
 # Audio
 PRODUCT_COPY_FILES += \
