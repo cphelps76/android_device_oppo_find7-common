@@ -40,6 +40,9 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 13747929088 # 13747945472 - 16384 for cryp
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := device/oppo/find7
 
+# Properties
+TARGET_SYSTEM_PROP += device/oppo/find7-common/system.prop
+
 # Recovery
 TARGET_RECOVERY_FSTAB := device/oppo/find7-common/rootdir/etc/fstab.qcom
 
