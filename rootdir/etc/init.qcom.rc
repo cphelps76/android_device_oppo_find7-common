@@ -18,7 +18,6 @@ import /init.qcom-common.rc
 
 on fs
     mount_all ./fstab.qcom
-    swapon_all ./fstab.qcom
 
     restorecon_recursive /persist
 
@@ -26,10 +25,6 @@ on init
     # Support legacy paths
     symlink /sdcard /mnt/sdcard
     symlink /sdcard /storage/sdcard0
-
-    write /sys/block/zram0/comp_algorithm lz4
-
-    write /proc/sys/vm/page-cluster 0
 
 on boot
     # For find7s notification LED
@@ -45,8 +40,3 @@ on boot
     chown system system /sys/class/leds/led:rgb_blue/ramp_step_ms
     chown system system /sys/class/leds/led:rgb_blue/duty_pcts
     chown system system /sys/class/leds/led:rgb_blue/blink
-
-on post-fs-data
-    # Torch
-    chown system camera /sys/devices/qcom,camera-led-flash.81/test
-    chmod 0660 /sys/devices/qcom,camera-led-flash.81/test
